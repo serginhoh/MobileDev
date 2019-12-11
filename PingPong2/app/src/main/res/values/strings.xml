@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" translatable="false">Ping Pong</string>
+    <string name="label_tile" translatable="false">PingPongX</string>
+    <string name="label_subtitle">Start the Game</string>
+    <string name="label_sub_sub_title">Players</string>
+    <string name="hint_player1">Player 1</string>
+    <string name="hint_player2">Player 2</string>
+    <string name="label_begin">Start Match</string>
+    <string name="label_developedby">Developed by : Me</string>
+</resources>

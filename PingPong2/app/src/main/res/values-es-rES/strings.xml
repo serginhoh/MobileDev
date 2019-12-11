@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_player1">Jugador 1</string>
+    <string name="hint_player2">Jugador 2</string>
+    <string name="label_begin">Iniciar Partido</string>
+    <string name="label_developedby">Desarrollado por Yo</string>
+    <string name="label_sub_sub_title">Jugadores</string>
+    <string name="label_subtitle">El Partido Va a Empezar</string>
+</resources>
