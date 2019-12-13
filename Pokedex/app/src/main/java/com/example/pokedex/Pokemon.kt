@@ -1,7 +1,7 @@
 package com.example.pokedex
 
 data class Pokemon (
-    val id : Int,
+    val id : String,
     val name : String,
     val sprites: Sprites
 )

@@ -53,6 +53,12 @@ class MainActivity : AppCompatActivity() {
                             .error(R.mipmap.ic_launcher)
                             .placeholder(R.mipmap.ic_launcher_round)
                             .into(ivImage)
+                        Picasso.get()
+                            .load(pokemon?.sprites?.back_shiny)
+                            .error(R.mipmap.ic_launcher)
+                            .placeholder(R.mipmap.ic_launcher_round)
+                            .into(ivImage2)
+
                         tvNome.text = pokemon?.name
                     } else {
                         Toast.makeText(
