@@ -3,6 +3,8 @@ package com.example.demowebservice
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -10,6 +12,8 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import okhttp3.OkHttpClient
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,9 +28,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun pesquisar() {
+
+        val httpClient = OkHttpClient.Builder()
+            .addNetworkInterceptor(StethoInterceptor())
+            .build();
+
         val retrofit = Retrofit.Builder()
             .baseUrl("https://api.github.com")
             .addConverterFactory(GsonConverterFactory.create())
+            .client(httpClient)
             .build()
 
         val gitHubService = retrofit.create(GitHubService::class.java)
