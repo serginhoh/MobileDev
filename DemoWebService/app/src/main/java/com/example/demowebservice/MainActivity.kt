@@ -53,6 +53,8 @@ class MainActivity : AppCompatActivity() {
                         val usuario = response?.body()
                         Picasso.get()
                             .load(usuario?.imagem)
+                            .error(R.mipmap.ic_launcher)
+                            .placeholder(R.mipmap.ic_launcher_round)
                             .into(ivUsuario)
                         tvUsuario.text = usuario?.nome
                     }
