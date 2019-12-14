@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -35,5 +36,7 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.google.firebase:firebase-database:18.0.0'
-    implementation 'com.google.firebase:firebase-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-auth:18.0.0'
+
+    implementation 'com.facebook.stetho:stetho:1.5.1'
 }
