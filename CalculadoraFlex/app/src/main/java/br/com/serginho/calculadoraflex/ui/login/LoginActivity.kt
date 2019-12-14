@@ -57,8 +57,18 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        /*
         if (requestCode == newUserRequestCode && resultCode == Activity.RESULT_OK) {
             inputLoginEmail.setText(data?.getStringExtra("email"))
+        }
+        */
+
+        when(requestCode){
+            newUserRequestCode -> {
+                if (resultCode == Activity.RESULT_OK)
+                    inputLoginEmail.setText(data?.getStringExtra("email"))
+            }
+            else -> {}
         }
     }
 }
