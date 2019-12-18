@@ -49,7 +49,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fiapVilaOlimpia, 16f))
 */
 
-        val fiapLins = LatLng(-23.5740998, -46.6254161)
+        val fiapLins = LatLng(-23.5745355, -46.6256956)
         mMap.addMarker(MarkerOptions().position(fiapLins).title(("Fiap Lins"))).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.iconfindersatelite1936917_1))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fiapLins, 16f))
 
